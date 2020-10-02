@@ -17,7 +17,7 @@ class UnitConverterClass {
   static final List<String> temparetureScale = [
     'Select unit',
     'Celsius',
-    'Fahrenheight',
+    'Fahrenheit',
     'Kelvin'
   ];
 
@@ -157,18 +157,18 @@ class UnitConverterClass {
     switch (unit) {
       case 'Celsius':
         results['Celsius'] = inputValue;
-        results['Fahrenheight'] = double
+        results['Fahrenheit'] = double
             .parse((inputValue * 1.8 + 32)
             .toStringAsFixed(2));
         results['Kelvin'] = double
             .parse((inputValue + 273.15)
             .toStringAsFixed(2));
         break;
-      case 'Fahrenheight':
+      case 'Fahrenheit':
         results['Celsius'] = double
             .parse(((inputValue - 32) / 1.8)
             .toStringAsFixed(2));
-        results['Fahrenheight'] = inputValue;
+        results['Fahrenheit'] = inputValue;
         results['Kelvin'] = double
             .parse(((inputValue - 32) * (5/9) + 273.15)
             .toStringAsFixed(2));
@@ -177,7 +177,7 @@ class UnitConverterClass {
         results['Celsius'] = double
             .parse((inputValue - 273.15)
             .toStringAsFixed(2));
-        results['Fahrenheight'] = double
+        results['Fahrenheit'] = double
             .parse(((inputValue - 273.15) * (9/5) + 32)
             .toStringAsFixed(2) );
         results['Kelvin'] = inputValue;

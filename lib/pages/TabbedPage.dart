@@ -282,7 +282,7 @@ class _TabbedPageState extends State<TabbedPage>
                       isScaleSelected = false;
 
                       switch (newValue){
-                        case 'Tempareture':
+                        case 'Temperature':
                           units = UnitConverterClass.temparetureScale;
                           break;
                         case 'Distance/Length':

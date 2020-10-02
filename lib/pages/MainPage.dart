@@ -14,6 +14,8 @@ import 'package:http/http.dart';
 import 'package:oktoast/oktoast.dart';
 
 import 'FExchangePage.dart';
+import 'TranslationPage.dart';
+
 
 class MainPage extends StatefulWidget {
   @override
@@ -134,20 +136,23 @@ class _MainPageState extends State<MainPage> {
                                       Icon(
                                         Icons.translate,
                                         size: 50,
-                                        color: ColorConstants.buttonTextDisabled,
+                                        color: ColorConstants.buttonText,
                                       ),
                                       SizedBox(width: 20),
                                       Text (
-                                        StringsConstants.comingSoon,
+                                        StringsConstants.Translator,
                                         style: TextStyle(
-                                          color: ColorConstants.buttonTextDisabled,
+                                          color: ColorConstants.buttonText,
                                           fontSize: 30,
                                         ),
                                       ),
                                     ],
                                   ),
                                   onPressed: () {
-                                    showToast('Translator is coming soon. Stay tuned!', position: ToastPosition.center);
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => TranslationPage()),
+                                    );
                                   },
                                 ),
                               ),
